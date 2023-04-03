@@ -7,25 +7,24 @@ import java.util.Iterator;
 
 public class Randoms implements Iterable<Integer> {
 
-	protected Random random;
+	//public static int getRandInt(int l, int r) {
+	//	int diff = r - l;
+	//	Random rnd = new Random();
+	//	return rnd.nextInt(diff + 1) + l;
+	//}
 
-	List<Integer> list = new ArrayList<>();
+	//protected Random random = new Random();
 
-	for (Integer item : list) {
-		System.out.println(item);
-	}
+
+	protected Random random = new Random();
+	List<Integer> randoms = new ArrayList<>();
 
 	public Randoms(int min, int max) {
-		while(true) {
-			list.add(getRandInt(min, max));
-		}
+		randoms.add(random);
 	}
 
 
-	public int getRandInt(int l, int r) {
-		int diff = r - l;
-		Random rnd = new Random();
-		return rnd.nextInt(diff + 1) + l;
 	}
+
 
 }
